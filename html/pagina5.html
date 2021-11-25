@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/taller.js"></script>
+  <title>REGISTRATE</title>
+</head>
+
+<body>
+  <!--- encabezado o nombre del centro medico-->
+  <div class="text-center bg-info text-white">
+    <h1>Grupo Clínica Médicos</h1>
+  </div>
+
+  <div class="container">
+    <br>
+    <!--- inicio del menu-->
+    <nav class="nav nav-pills flex-column flex-sm-row">
+      <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="../index.html"><h6>INICIO</h6></a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="../html/pagina1.html"><h6>¿QUIENES SOMOS?</h6></a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="../html/pagina2.html"><h6>NUESTROS SERVICIOS</h6></a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="../html/pagina3.html"><h6>NUESTRO EQUIPO</h6></a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="../html/pagina4.html"><h6>NOTICIAS</h6></a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="../html/pagina5.html"><h6>REGISTRATE</h6></a>
+    </nav>
+    <br>
+    <!---fin del menu-->
+
+
+    <!--- pie de pagina-->
+
+    <div class="row">
+      <div class="col-lg-2">
+      </div> 
+  
+      <div class="col-lg-8">
+        <img src="../img/img7.jpg" class="img-fluid">
+      </div>
+      <div class="col-lg-2">
+      
+    
+      </div>
+    </div>
+    <br>
+    <h3 class="text-primary">Formulario de Registro</h3>
+    <br>
+    <div class="row">
+
+      <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6  ">
+        <form name="registro" id="miForm" autocomplete="off">
+          <div class="mb-3">
+            <div class="row">
+              <div class="col">
+                <input type="text text-dark" class="form-control border border-primary " placeholder="Nombres*" aria-label="Nombres*"
+                  id="tNombre">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control text-dark border border-primary" placeholder="Apellidos*" aria-label="Apellidos*"
+                  id="tApellido">
+              </div>
+            </div>
+            <br>
+            <label for="txtEmail" class="form-label text-black "><h6>Correo Electronico*</h6> </label>
+            <input type="email" class="form-control border border-primary" id="Correo1" aria-describedby="emailHelp">
+            <div class="form-text text-danger">*Nunca compartiremos tu correo electronico con nadie mas.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="txtelefono" class="form-label text-black"><h6>Telefono*</h6> </label>
+            <input type="number" class="form-control border border-primary" id="nTelefono" aria-describedby="emailHelp">
+          </div>
+
+          <br>
+          <h6> Tipo de documento</h6>
+
+          <div class="col-sm-10">
+            <div class="form-check  text-black">
+              <input class="form-check-input" type="radio" id="radio1" name="nombreradio" value="Cedula" >
+              <label class="form-check-label" for="gridRadios1">
+                Cedula
+              </label>
+            </div>
+          </div>
+          <div class="form-check text-black">
+            <input class="form-check-input" type="radio" id="radio2" name="nombreradio" value="Cedula de Extrangeria">
+            <label class="form-check-label" for="gridRadios2">
+              Cedula de Extrangeria
+            </label>
+
+          </div>
+
+          <div class="form-check text-black">
+            <input class="form-check-input" type="radio" id="radio3" name="nombreradio" value="Tarjeta de Identidad">
+            <label class="form-check-label" for="gridRadios3">
+              Tarjeta de Identidad
+            </label>
+
+          </div>
+
+          <div class="form-check text-black">
+            <input class="form-check-input" type="radio" id="radio4" name="nombreradio" value="Otro">
+            <label class="form-check-label" for="gridRadios4">
+              Otro
+            </label>
+
+          </div>
+
+
+
+          <br>
+
+          <div class="mb-3">
+            <label for="txtnumerodoc " class="form-label text-black">
+              <h6>Numero de Documento</h6>
+            </label>
+            <input type="number" class="form-control border border-primary" id="tDocumento">
+          </div>
+
+          
+
+          <br>
+          <button type="button" id="btnRegistrar" value="Mostrar" class="btn btn-outline-primary"
+            onclick="Registro()">Registrar</button>
+
+          <button  type="button" id="btneditar" class="btn btn-outline-warning"  onclick="actualizarFila()" >Editar</button>
+
+
+        </form>
+
+        <br><br>
+
+
+        <div id="cuadro" >
+
+          <table class="table table-bordered border-secondary table-hover table-primary" id="mitabla1">
+            <tr>
+              <th class="text-black">#</th>
+              <th class="text-primary">    CORREO   </th>
+              <th class="text-primary">   TELEFONO   </th>
+              <th class="text-primary">   NOMBRES    </th>
+              <th class="text-primary">   APELLIDOS  </th>
+              <th class="text-primary" >  TIPO DE DOCUMENTO   </th>
+              <th class="text-primary">   NUMERO DE DOCUMENTO   </th>
+              <th class="text-center text-black">Opcion</th>
+            </tr>
+
+
+
+
+
+          </table>
+
+
+        </div>
+
+
+
+
+        <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6  ">
+
+              
+        
+
+        </div>
+
+      </div>
+     
+
+
+    </div>
+  </div>
+  <hr>
+  <!--- pie de pagina-->
+  <div class="text-center bg-info text-black">
+    Informacion@clinicamedicos.com <br>
+    Calle 14 #17 – 47 Valledupar – Cesar, Colombia <br>
+    (57) (5) 847612 <br>
+    Copyright © 2017 by FQ Tecnologia.
+  </div>
+
+
+</body>
+
+</html>

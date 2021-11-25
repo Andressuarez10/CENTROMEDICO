@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
+        rel="stylesheet" id="bootstrap-css">
+    <script src="../js/tallerparte2.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>AGENDA TU CITA</title>
+</head>
+
+<body>
+    <!--- encabezado o nombre del centro medico-->
+    <div class="text-center bg-info text-white">
+        <h1>Grupo Clínica Médicos</h1>
+    </div>
+
+    <div class="container">
+        <br>
+        <!--- inicio del menu-->
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="../index.html"><h6>INICIO</h6></a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="../html/pagina1.html"><h6>¿QUIENES SOMOS?</h6></a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="../html/pagina2.html"><h6>NUESTROS SERVICIOS</h6></a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="../html/pagina3.html"><h6>NUESTRO EQUIPO</h6></a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="../html/pagina4.html"><h6>NOTICIAS</h6></a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="../html/pagina5.html"><h6>REGISTRATE</h6></a>
+          </nav>
+        <br>
+        <!---fin del menu-->
+       
+        <div class="row">
+            <div class="col-lg-2">
+                
+            </div>
+            <div class="col-lg-8">
+                <img src="../img/img8.jpg" class="img-fluid" >
+            </div>
+            <div class="col-lg-2">
+               
+            </div>
+        </div>
+        <br>
+        
+    <h3 class="text-primary">Formulario De Agendacion De Citas</h3>
+    <br>
+
+        <div class="row">
+
+            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6  ">
+                <form name="registro" id="miForm" autocomplete="off">
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1 " class="form-label text-black ">
+                            <h6>Nombres y Apellidos</h6>
+                        </label>
+                        <input type="email" class="form-control border border-primary" id="txtNomApe" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1 " class="form-label text-black ">
+                            <h6>Numero de Identificacion</h6>
+                        </label>
+                        <input type="number" class="form-control border border-primary" id="nId" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <h6>Especialidades</h6>
+                        <select class="form-select form-select-sm border border-primary"
+                            aria-label=".form-select-sm example">
+
+                            <option selected disabled >Seleccione...</option>
+
+                            <option id="option1" name="opciones" value="1">Oncología Clínica - Dr. Fredy Osorio Donado. </option>
+
+                            <option id="option2" name="opciones" value="2"> Medicina Interna y Hematología - Dr. Ricardo Romero Villa.</option>
+
+                            <option id="option3" name="opciones" value="3">Medicina Externa y Hepatología - Dra. Sol Palacios Iriarte.</option>
+                        </select>
+                        <br>
+                        <div class="row">
+                            <h6>Agenda</h6>
+                        </div>
+                        <div class="row">
+                            <div class='col-sm-6'>
+                                <form>
+                                    <div class="form-group">
+                                        <div class='input-group date' id='datepicker'>
+                                            <input type='text' class="form-control border border-primary" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript"
+                        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+                    <script>
+                        $(function () {
+                            $('#datepicker').datepicker({
+                                format: "dd/mm/yyyy",
+                                autoclose: true,
+                                todayHighlight: true,
+                                showOtherMonths: true,
+                                selectOtherMonths: true,
+                                autoclose: true,
+                                changeMonth: true,
+                                changeYear: true,
+                                orientation: "button"
+                            });
+                        });
+                    </script>
+                     <br>
+
+                     <div class="mb-3">
+                        <label for="exampleInputPassword1 " class="form-label text-black">
+                            <h6>Direccion</h6>
+                        </label>
+                        <input type="email" class="form-control border border-primary" id="txtDireccion" aria-describedby="emailHelp">
+                    </div>
+
+
+                    <br>
+                    <button type="button" id="btnagendar" class="btn btn-outline-primary"  onclick="agendar()">Agendar</button>
+                    <br>
+                    <br>
+                </form>
+            </div>
+
+
+
+
+
+            <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6  ">
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <hr>
+    <!--- pie de pagina-->
+    <div class="text-center bg-info text-black">
+        Informacion@clinicamedicos.com <br>
+        Calle 14 #17 – 47 Valledupar – Cesar, Colombia <br>
+        (57) (5) 847612 <br>
+        Copyright © 2017 by FQ Tecnologia.
+    </div>
+
+</body>
+
+</html>
